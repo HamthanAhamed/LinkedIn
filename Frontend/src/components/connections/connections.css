@@ -1,0 +1,192 @@
+.connections-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.connections-header {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.connections-header h1 {
+  margin: 0 0 15px 0;
+}
+
+.connections-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.connections-tabs button {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+}
+
+.connections-tabs button.active {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+.connections-tabs button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0a66c2;
+}
+
+.connections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.connection-item {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s;
+}
+
+.connection-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.connection-item.pending {
+  border-left: 4px solid #ffc107;
+}
+
+.connection-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.connection-info {
+  flex: 1;
+}
+
+.connection-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.connection-info h4 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.connection-info h4 a:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+}
+
+.connection-info p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.connection-meta {
+  color: #999;
+  font-size: 12px;
+}
+
+.connection-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.connection-actions button {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-message {
+  background: #0a66c2;
+  color: white;
+}
+
+.btn-message:hover {
+  background: #004182;
+}
+
+.btn-remove {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.btn-remove:hover {
+  background: #e0e0e0;
+}
+
+.btn-accept {
+  background: #0a66c2;
+  color: white;
+}
+
+.btn-accept:hover {
+  background: #004182;
+}
+
+.btn-decline {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.btn-decline:hover {
+  background: #e0e0e0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-find-people {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #0a66c2;
+  color: white;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: 600;
+}
+
+.btn-find-people:hover {
+  background: #004182;
+}
+
+.connections-loading {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+}
