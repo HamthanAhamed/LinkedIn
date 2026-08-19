@@ -19,12 +19,12 @@ const App = () => {
         <div className="app">
           {isAuthenticated && <Navbar />}
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/feed" element={isAuthenticated ? <Feed /> : <Navigate to="/login" />} />
-            <Route path="/profile/:userId?" element={isAuthenticated ? <Profile /> : <Navigate to="/login" />} />
-            <Route path="/connections" element={isAuthenticated ? <Connections /> : <Navigate to="/login" />} />
-            <Route path="/messages" element={isAuthenticated ? <Messages /> : <Navigate to="/login" />} />
+            <Route path="/login" element={<Navigate to="/feed" />} />
+            <Route path="/register" element={<Navigate to="/feed" />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/profile/:userId?" element={<Profile />} />
+            <Route path="/connections" element={<Connections />} />
+            <Route path="/messages" element={<Messages />} />
             <Route path="/" element={<Navigate to="/feed" />} />
           </Routes>
         </div>
